@@ -1,0 +1,9 @@
+[Unit]
+Description=MQTT Automation Client
+
+[Service]
+WorkingDirectory=/root/mqtt/automation
+ExecStart=/root/mqtt/automation/mqtt-automation.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=MQTT Server
+
+[Service]
+WorkingDirectory=/root/mqtt/server
+ExecStart=/root/mqtt/server/mqtt-server.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,20 @@
+{
+  "name": "mqtt-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx ts-node src/app.ts",
+    "test-rules": "npx ts-node tests/test_rules.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^4.3.7",
+    "suncalc": "^1.9.0",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
+}

@@ -1,0 +1,43 @@
+{
+    "mqtt": {
+        "url": "mqtt://localhost",
+        "options": {}
+    },
+    "control_topic": "cmnd/tasmota_AE1706/",
+    "events_topic": "stat/tasmota_AE1706/",
+    "location": {
+        "lat": 50.45,
+        "lng": 30.52
+    },
+    "rules": [
+        {
+            "name": "evening_on",
+            "begin": "sunset",
+            "end": "23:00",
+            "action": "POWER",
+            "payload": "ON"
+        },
+        {
+            "name": "night_off",
+            "begin": "23:00",
+            "end": "05:00",
+            "next_day": true,
+            "action": "POWER",
+            "payload": "OFF"
+        },
+        {
+            "name": "morning_on",
+            "begin": "05:00",
+            "end": "sunrise",
+            "action": "POWER",
+            "payload": "ON"
+        },
+        {
+            "name": "day_off",
+            "begin": "sunrise",
+            "end": "sunset",
+            "action": "POWER",
+            "payload": "OFF"
+        }
+    ]
+}
